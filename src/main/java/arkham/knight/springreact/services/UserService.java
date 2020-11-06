@@ -1,6 +1,6 @@
 package arkham.knight.springreact.services;
 
-import arkham.knight.springreact.nodels.User;
+import arkham.knight.springreact.nodels.Client;
 import arkham.knight.springreact.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,14 +13,14 @@ public class UserService {
     private UserRepository userRepository;
 
 
-    public List<User> getAllUsers(){
+    public List<Client> getAllUsers(){
 
         return userRepository.findAll();
     }
 
 
-    public void saveUser(User userToSave){
+    public void saveUser(Client clientToSave){
 
-        userRepository.save(userToSave);
+        userRepository.save(clientToSave);
     }
 }

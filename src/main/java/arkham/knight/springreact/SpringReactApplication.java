@@ -1,6 +1,6 @@
 package arkham.knight.springreact;
 
-import arkham.knight.springreact.nodels.User;
+import arkham.knight.springreact.nodels.Client;
 import arkham.knight.springreact.services.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,9 +18,9 @@ public class SpringReactApplication {
     CommandLineRunner runner(UserService userService){
         return args -> {
 
-            User userToSave = new User("karl","rodriguez");
+            Client clientToSave = new Client("karl","rodriguez");
 
-            userService.saveUser(userToSave);
+            userService.saveUser(clientToSave);
         };
     };
 }
