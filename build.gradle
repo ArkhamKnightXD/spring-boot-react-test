@@ -16,11 +16,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'org.postgresql:postgresql'
-    
+    //runtimeOnly 'org.postgresql:postgresql'
+
+    //Lombok dependencies
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
     //Incluyendo la librreria de OpenApi3.
     compile 'org.springdoc:springdoc-openapi-ui:1.2.32'
-    //runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'com.h2database:h2'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
