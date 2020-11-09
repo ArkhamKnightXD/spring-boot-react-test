@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Aqui llamamos a nuestro componenete app y este se renderiza en donde esta 
+//el el elemento con el id root del index.html en public 
 ReactDOM.render(
   <React.StrictMode>
     <App />
