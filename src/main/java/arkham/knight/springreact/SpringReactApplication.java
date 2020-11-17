@@ -1,6 +1,6 @@
 package arkham.knight.springreact;
 
-import arkham.knight.springreact.nodels.User;
+import arkham.knight.springreact.models.User;
 import arkham.knight.springreact.services.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

@@ -1,6 +1,6 @@
 package arkham.knight.springreact.controllers;
 
-import arkham.knight.springreact.nodels.User;
+import arkham.knight.springreact.models.User;
 import arkham.knight.springreact.services.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;

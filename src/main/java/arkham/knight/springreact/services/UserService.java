@@ -1,6 +1,6 @@
 package arkham.knight.springreact.services;
 
-import arkham.knight.springreact.nodels.User;
+import arkham.knight.springreact.models.User;
 import arkham.knight.springreact.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package arkham.knight.springreact.nodels;
+package arkham.knight.springreact.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
