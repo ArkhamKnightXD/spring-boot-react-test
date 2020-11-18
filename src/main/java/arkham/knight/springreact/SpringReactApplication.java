@@ -25,5 +25,5 @@ public class SpringReactApplication {
 
             userService.saveUser(userToSave);
         };
-    };
+    }
 }
