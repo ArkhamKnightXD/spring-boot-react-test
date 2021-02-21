@@ -1,1 +1,0 @@
-npm install axios ---> axios es una libreria que nos permite hacer peticiones http en react
