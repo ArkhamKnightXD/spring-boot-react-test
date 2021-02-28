@@ -2,22 +2,23 @@ package arkham.knight.springreact.services;
 
 import arkham.knight.springreact.models.User;
 import arkham.knight.springreact.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 public class UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
 
-    public User saveUser(User userToSave){
+    public void saveUser(User userToSave){
 
         userRepository.save(userToSave);
 
-        return userToSave;
     }
 
 
@@ -27,15 +28,22 @@ public class UserService {
     }
 
 
-    public User findUserById(Long userId){
+    public void updateUser(User userToUpdate){
 
-        return userRepository.findUserById(userId);
+        User userToFind = userRepository.findUserById(userToUpdate.getId());
+
+        userToFind.setName(userToUpdate.getName());
+        userToFind.setLastName(userToUpdate.getLastName());
+
+        userRepository.save(userToFind);
     }
 
 
-    public void deleteUser(User userToDelete){
+    public void deleteUser(Long userId){
+
+        User userToDelete = userRepository.findUserById(userId);
 
         if (userToDelete != null)
-        userRepository.delete(userToDelete);
+            userRepository.delete(userToDelete);
     }
 }

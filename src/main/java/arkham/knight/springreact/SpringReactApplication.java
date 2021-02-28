@@ -20,10 +20,17 @@ public class SpringReactApplication {
 
             User userToSave = new User();
 
-            userToSave.setName("kar");
-            userToSave.setLastName("jar");
+            userToSave.setName("Karvin");
+            userToSave.setLastName("Jimenez");
 
             userService.saveUser(userToSave);
+
+            User userToSave1 = new User();
+
+            userToSave1.setName("Alex");
+            userToSave1.setLastName("Rodriguez");
+
+            userService.saveUser(userToSave1);
         };
     }
 }
