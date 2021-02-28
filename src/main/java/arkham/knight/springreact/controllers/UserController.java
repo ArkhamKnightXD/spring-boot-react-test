@@ -41,6 +41,14 @@ public class UserController {
         return new ResponseEntity<>("User Saved", HttpStatus.OK);
     }
 
+    @GetMapping(path = "/get/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable("id") long userId){
+
+        User actualUser = userService.getUserById(userId);
+
+        return new ResponseEntity<>(actualUser, HttpStatus.OK);
+    }
+
     //desde el frontend por la forma que estoy trabajando se me hace mejor recibir el objeto completo
     @PutMapping(path = "/update")
     public ResponseEntity<String> UpdateUser(@RequestBody User userToUpdate){

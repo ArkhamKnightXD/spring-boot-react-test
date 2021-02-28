@@ -28,6 +28,12 @@ public class UserService {
     }
 
 
+    public User getUserById(long id){
+
+        return userRepository.findUserById(id);
+    }
+
+
     public void updateUser(User userToUpdate){
 
         User userToFind = userRepository.findUserById(userToUpdate.getId());
@@ -39,7 +45,7 @@ public class UserService {
     }
 
 
-    public void deleteUser(Long userId){
+    public void deleteUser(long userId){
 
         User userToDelete = userRepository.findUserById(userId);
 
