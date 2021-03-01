@@ -18,7 +18,6 @@ public class UserService {
     public void saveUser(User userToSave){
 
         userRepository.save(userToSave);
-
     }
 
 
